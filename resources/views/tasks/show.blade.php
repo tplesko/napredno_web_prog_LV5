@@ -15,8 +15,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ $task->naziv_rada }}</h3>
-                        <p class="text-lg text-gray-600 italic">{{ $task->naziv_rada_engleski }}</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ $task->naziv }}</h3>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
@@ -41,7 +40,7 @@
                     <div class="mb-6">
                         <h4 class="text-lg font-semibold text-gray-700 mb-2">{{ __('tasks.task_description') }}</h4>
                         <div class="bg-gray-50 p-4 rounded-lg">
-                            <p class="whitespace-pre-line">{{ $task->zadatak_rada }}</p>
+                            <p class="whitespace-pre-line">{{ $task->zadatak }}</p>
                         </div>
                     </div>
 

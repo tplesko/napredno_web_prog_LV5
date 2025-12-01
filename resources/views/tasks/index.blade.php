@@ -1,4 +1,7 @@
 <x-app-layout>
+    @php
+        $lang = app()->getLocale(); // 'hr' ili 'en'
+    @endphp
     <x-slot name="header">
         <div class="flex justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -30,11 +33,24 @@
                             <table class="min-w-full divide-y divide-gray-200">
                                 <thead>
                                     <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Naziv Rada</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tip Studija</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nastavnik</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Datum</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Akcije</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                            {{ __('tasks.title') }}
+                                        </th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                            {{ __('tasks.task_description') }}
+                                        </th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                            {{ __('tasks.study_type') }}
+                                        </th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                            {{ __('tasks.teacher') }}
+                                        </th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                            {{ __('tasks.date') }}
+                                        </th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                            {{ __('tasks.actions') }}
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
@@ -42,8 +58,12 @@
                                         <tr>
                                             <td class="px-6 py-4">
                                                 <a href="{{ route('tasks.show', $task) }}" class="text-blue-600 hover:text-blue-900">
-                                                    {{ $task->naziv_rada }}
+                                                    {{ $task->{'naziv_rada_' . $lang} }}
                                                 </a>
+                                            </td>
+
+                                            <td class="px-6 py-4">
+                                                {{ Str::limit($task->{'zadatak_rada_' . $lang}, 50) }}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <span class="px-2 py-1 text-xs rounded-full bg-blue-200 text-blue-800">

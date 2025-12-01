@@ -1,7 +1,6 @@
 <?php
 
 return [
-    'title' => 'Završni i Diplomski Radovi',
     'add_new' => 'Dodaj Novi Rad',
     'add_task' => 'Dodaj Novi Rad',
     'edit_task' => 'Uredi Rad',
@@ -10,9 +9,12 @@ return [
     'no_tasks' => 'Nema dodanih radova.',
     
     // Form labels
-    'title_hr' => 'Naziv Rada',
+    'title' => 'Naziv Rada (Hrvatski)',
     'title_en' => 'Naziv Rada (Engleski)',
-    'task_description' => 'Zadatak Rada',
+    'task_description' => 'Zadatak Rada (Hrvatski)',
+    'task_description_en' => 'Zadatak Rada (Engleski)',
+    'title_hr' => 'Naziv Rada (Hrvatski)',
+    'task_description_hr' => 'Zadatak Rada (Hrvatski)',
     'study_type' => 'Tip Studija',
     'select_study_type' => 'Odaberite tip studija',
     'teacher' => 'Nastavnik',

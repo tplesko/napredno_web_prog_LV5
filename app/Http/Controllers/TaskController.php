@@ -25,21 +25,36 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        // Provjera da li je korisnik nastavnik
-        if (auth()->user()->role !== 'nastavnik') {
-            abort(403, 'Samo nastavnici mogu dodavati radove.');
-        }
-
         $validated = $request->validate([
-            'naziv_rada' => 'required|string|max:255',
-            'naziv_rada_engleski' => 'required|string|max:255',
-            'zadatak_rada' => 'required|string',
+            'naziv_rada_hr' => 'required|string|max:255',
+            'naziv_rada_en' => 'required|string|max:255',
+            'zadatak_rada_hr' => 'required|string',
+            'zadatak_rada_en' => 'required|string',
             'tip_studija' => 'required|in:stručni,preddiplomski,diplomski',
         ]);
 
         auth()->user()->tasks()->create($validated);
 
         return redirect()->route('tasks.index')->with('success', __('tasks.success_added'));
+    }
+
+    public function update(Request $request, Task $task)
+    {
+        if ($task->user_id !== auth()->id()) {
+            abort(403, 'Možete uređivati samo svoje radove.');
+        }
+
+        $validated = $request->validate([
+            'naziv_rada_hr' => 'required|string|max:255',
+            'naziv_rada_en' => 'required|string|max:255',
+            'zadatak_rada_hr' => 'required|string',
+            'zadatak_rada_en' => 'required|string',
+            'tip_studija' => 'required|in:stručni,preddiplomski,diplomski',
+        ]);
+
+        $task->update($validated);
+
+        return redirect()->route('tasks.index')->with('success', __('tasks.success_updated'));
     }
 
     public function show(Task $task)
@@ -54,24 +69,6 @@ class TaskController extends Controller
         }
 
         return view('tasks.edit', compact('task'));
-    }
-
-    public function update(Request $request, Task $task)
-    {
-        if ($task->user_id !== auth()->id()) {
-            abort(403, 'Možete uređivati samo svoje radove.');
-        }
-
-        $validated = $request->validate([
-            'naziv_rada' => 'required|string|max:255',
-            'naziv_rada_engleski' => 'required|string|max:255',
-            'zadatak_rada' => 'required|string',
-            'tip_studija' => 'required|in:stručni,preddiplomski,diplomski',
-        ]);
-
-        $task->update($validated);
-
-        return redirect()->route('tasks.index')->with('success', __('tasks.success_updated'));
     }
 
     public function destroy(Task $task)

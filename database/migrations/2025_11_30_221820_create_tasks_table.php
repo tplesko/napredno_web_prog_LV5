@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('naziv_rada');
-            $table->string('naziv_rada_engleski');
             $table->text('zadatak_rada');
             $table->enum('tip_studija', ['stručni', 'preddiplomski', 'diplomski']);
             $table->timestamps();

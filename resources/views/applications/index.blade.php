@@ -29,8 +29,8 @@
                                 <div class="border rounded-lg p-6 hover:shadow-lg transition">
                                     <div class="flex justify-between items-start mb-4">
                                         <div class="flex-1">
-                                            <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $task->naziv_rada }}</h3>
-                                            <p class="text-gray-600 italic mb-2">{{ $task->naziv_rada_engleski }}</p>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $task->naziv }}</h3>
+                                            <p class="text-sm text-gray-700 whitespace-pre-line">{{ Str::limit($task->zadatak, 200) }}</p>
                                             <div class="flex gap-4 text-sm text-gray-500">
                                                 <span>{{ __('tasks.teacher') }}: <strong>{{ $task->user->name }}</strong></span>
                                                 <span>{{ __('tasks.study_type') }}: <strong>{{ __('tasks.' . $task->tip_studija) }}</strong></span>

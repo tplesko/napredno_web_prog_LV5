@@ -14,28 +14,37 @@
                         @method('PUT')
 
                         <div class="mb-4">
-                            <label for="naziv_rada" class="block text-sm font-medium text-gray-700">{{ __('tasks.title_hr') }}</label>
-                            <input type="text" name="naziv_rada" id="naziv_rada" value="{{ old('naziv_rada', $task->naziv_rada) }}" 
+                            <label for="naziv_rada_hr" class="block text-sm font-medium text-gray-700">{{ __('tasks.title_hr') }}</label>
+                            <input type="text" name="naziv_rada_hr" id="naziv_rada_hr" value="{{ old('naziv_rada_hr', $task->naziv_rada_hr) }}" 
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>
-                            @error('naziv_rada')
+                            @error('naziv_rada_hr')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label for="naziv_rada_engleski" class="block text-sm font-medium text-gray-700">{{ __('tasks.title_en') }}</label>
-                            <input type="text" name="naziv_rada_engleski" id="naziv_rada_engleski" value="{{ old('naziv_rada_engleski', $task->naziv_rada_engleski) }}" 
+                            <label for="naziv_rada_en" class="block text-sm font-medium text-gray-700">{{ __('tasks.title_en') }}</label>
+                            <input type="text" name="naziv_rada_en" id="naziv_rada_en" value="{{ old('naziv_rada_en', $task->naziv_rada_en) }}" 
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>
-                            @error('naziv_rada_engleski')
+                            @error('naziv_rada_en')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label for="zadatak_rada" class="block text-sm font-medium text-gray-700">{{ __('tasks.task_description') }}</label>
-                            <textarea name="zadatak_rada" id="zadatak_rada" rows="6" 
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>{{ old('zadatak_rada', $task->zadatak_rada) }}</textarea>
-                            @error('zadatak_rada')
+                            <label for="zadatak_rada_hr" class="block text-sm font-medium text-gray-700">{{ __('tasks.task_description_hr') }}</label>
+                            <textarea name="zadatak_rada_hr" id="zadatak_rada_hr" rows="6" 
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>{{ old('zadatak_rada_hr', $task->zadatak_rada_hr) }}</textarea>
+                            @error('zadatak_rada_hr')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="zadatak_rada_en" class="block text-sm font-medium text-gray-700">{{ __('tasks.task_description_en') }}</label>
+                            <textarea name="zadatak_rada_en" id="zadatak_rada_en" rows="6" 
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" required>{{ old('zadatak_rada_en', $task->zadatak_rada_en) }}</textarea>
+                            @error('zadatak_rada_en')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
                         </div>
