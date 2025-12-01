@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'available_tasks' => 'Available Theses',
+    'my_applications' => 'My Applications',
+    'applications_on_tasks' => 'Applications on Theses',
+    'no_available_tasks' => 'There are currently no available theses.',
+    'no_applications' => 'No applications on your theses.',
+    'apply' => 'Apply',
+    'applied' => 'Applied',
+    'accepted' => 'Accepted',
+    'rejected' => 'Rejected',
+    'pending' => 'Pending',
+    'accept' => 'Accept',
+    'reject' => 'Reject',
+    'message' => 'Message (optional)',
+    'message_placeholder' => 'Why do you want to work on this thesis?',
+    'student' => 'Student',
+    'status' => 'Status',
+    'date_applied' => 'Application Date',
+    'student_message' => 'Student Message',
+    'no_message' => 'No message',
+    'applications' => 'Applications',
+    'no_applications_yet' => 'No applications yet',
+    
+    // Messages
+    'already_taken' => 'This thesis is already taken.',
+    'already_applied' => 'You have already applied for this thesis.',
+    'already_accepted' => 'You have already accepted a student for this thesis.',
+    'success_applied' => 'Successfully applied for the thesis!',
+    'success_accepted' => 'Student successfully accepted!',
+    'success_rejected' => 'Application rejected.',
+    'confirm_accept' => 'Are you sure you want to accept this student? Other applications will be automatically rejected.',
+    'confirm_reject' => 'Are you sure you want to reject this application?',
+];

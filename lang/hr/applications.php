@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'available_tasks' => 'Dostupni Radovi',
+    'my_applications' => 'Moje Prijave',
+    'applications_on_tasks' => 'Prijave na Radove',
+    'no_available_tasks' => 'Trenutno nema dostupnih radova.',
+    'no_applications' => 'Nema prijava na vaše radove.',
+    'apply' => 'Prijavi se',
+    'applied' => 'Prijavljen/a',
+    'accepted' => 'Prihvaćen/a',
+    'rejected' => 'Odbijen/a',
+    'pending' => 'Na čekanju',
+    'accept' => 'Prihvati',
+    'reject' => 'Odbij',
+    'message' => 'Poruka (opcionalno)',
+    'message_placeholder' => 'Zašto želite raditi na ovom radu?',
+    'student' => 'Student',
+    'status' => 'Status',
+    'date_applied' => 'Datum Prijave',
+    'student_message' => 'Poruka Studenta',
+    'no_message' => 'Nema poruke',
+    'applications' => 'Prijave',
+    'no_applications_yet' => 'Nema prijava',
+    
+    // Messages
+    'already_taken' => 'Ovaj rad je već zauzet.',
+    'already_applied' => 'Već ste se prijavili na ovaj rad.',
+    'already_accepted' => 'Već ste prihvatili studenta za ovaj rad.',
+    'success_applied' => 'Uspješno ste se prijavili na rad!',
+    'success_accepted' => 'Student je uspješno prihvaćen!',
+    'success_rejected' => 'Prijava je odbijena.',
+    'confirm_accept' => 'Jeste li sigurni da želite prihvatiti ovog studenta? Ostale prijave će biti automatski odbijene.',
+    'confirm_reject' => 'Jeste li sigurni da želite odbiti ovu prijavu?',
+];
